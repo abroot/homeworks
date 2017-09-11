@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="touch or swipe→" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBy-3H-tFn">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="touch or swipe ←→" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBy-3H-tFn">
                                 <rect key="frame" x="29" y="73" width="263" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,6 +32,7 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OIn-uD-vaA" appends="YES" id="PCh-6f-AOY"/>
                                     <outletCollection property="gestureRecognizers" destination="XZi-Gg-wE8" appends="YES" id="1hG-oI-ib4"/>
+                                    <outletCollection property="gestureRecognizers" destination="pbf-q8-DHl" appends="YES" id="JAA-Cq-5Kl"/>
                                 </connections>
                             </label>
                         </subviews>
@@ -46,7 +47,12 @@
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="XZi-Gg-wE8">
                     <connections>
-                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="q5l-VO-bFr"/>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="FRz-XF-Y2R"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="pbf-q8-DHl">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="Cpf-VM-ImE"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

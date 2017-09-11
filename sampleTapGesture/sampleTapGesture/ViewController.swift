@@ -12,13 +12,24 @@ class ViewController: UIViewController {
     
     
     @IBAction func touchGesture(_ sender: UITapGestureRecognizer) {
-        print("touch!!")
+        let alert = UIAlertController(title: "gesture", message: "tap", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        present(alert,animated: true,completion: nil)
     }
     
-    @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
-        print("swipe!!")
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        let alert = UIAlertController(title: "gesture", message: "swipe right", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        present(alert,animated: true,completion: nil)
     }
-
+    
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        let alert = UIAlertController(title: "gesture", message: "swipe left", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        present(alert,animated: true,completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
